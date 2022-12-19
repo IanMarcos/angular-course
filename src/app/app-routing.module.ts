@@ -5,6 +5,10 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { 
+    path: 'piano',
+    loadChildren: () => import('./modules/piano/piano.module').then(m => m.PianoModule)
+  },
   { path: '**', component: PageNotFoundComponent}
 ];
 

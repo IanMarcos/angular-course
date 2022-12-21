@@ -9,6 +9,10 @@ const routes: Routes = [
     path: 'piano',
     loadChildren: () => import('./modules/piano/piano.module').then(m => m.PianoModule)
   },
+  { 
+    path: 'blackjack',
+    loadChildren: () => import('./modules/blackjack-dice/blackjack-dice.module').then(m => m.BlackjackDiceModule)
+  },
   { path: '**', component: PageNotFoundComponent}
 ];
 

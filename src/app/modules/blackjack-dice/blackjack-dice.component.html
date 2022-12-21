@@ -1,0 +1,54 @@
+<main class="flex flex-col justify-center items-center h-screen gap-y-8">
+  <h1 class="text-4xl">Play Blackjack!</h1>
+  <div class="flex gap-x-12">
+    <img
+      [src]="leftDiceImg"
+      [alt]="'Dice with value ' + leftDice"
+      class="w-24"
+    />
+    <img
+      *ngIf="rigthDiceRendered"
+      [src]="rigthDiceImg"
+      [alt]="'Dice with value ' + rigthDice"
+      class="w-24"
+    />
+  </div>
+  <div>
+    <h2 class="text-xl">Score</h2>
+    <h3 class="text-2xl text-center">{{ score }}</h3>
+  </div>
+  <div>
+    <button
+      (click)="handleRollDice()"
+      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-900 text-lg text-white"
+    >
+      Roll
+    </button>
+    <button
+      [disabled]="score === 0"
+      (click)="handleStay()"
+      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-700 text-lg text-white"
+    >
+      Stay
+    </button>
+  </div>
+
+  <div
+    *ngIf="gameState !== 'playing'"
+    [ngSwitch]="gameState"
+    class="fixed h-screen w-screen bg-black/70 flex flex-col justify-center items-center gap-6 text-white"
+  >
+    <strong *ngSwitchCase="'blackjack'" class="text-3xl">Blackjack!</strong>
+    <strong *ngSwitchCase="'finished'" class="text-3xl">Round finished!</strong>
+    <strong *ngSwitchCase="'lost'" class="text-3xl">You lost</strong>
+    <p>
+      Your score is: <strong>{{ score }}</strong>
+    </p>
+    <button
+      (click)="handleGameReset()"
+      class="bg-gray-900 rounded-xl text-white px-3 py-2"
+    >
+      Play again
+    </button>
+  </div>
+</main>

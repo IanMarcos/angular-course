@@ -22,7 +22,17 @@ export default class ToDo {
   }
 
   private formatDate(date: Date): string {
-    return `${date.getHours()}:${date.getMinutes()} - ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+
+    let hoursString: string = hours < 10
+      ? '0' + hours
+      : hours.toString();
+    let minutesString: string = minutes < 10
+      ? '0' + minutes
+      : minutes.toString();
+
+    return `${hoursString}:${minutesString} - ${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`
   }
 
   public getTask(): string {

@@ -4,7 +4,11 @@ module.exports = {
     './src/**/*.{html,ts}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'paper-line': "url('src/assets/imgs/todo-list/paper-line.webp')"
+      }
+    },
   },
   plugins: [],
 }

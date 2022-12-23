@@ -13,6 +13,10 @@ const routes: Routes = [
     path: 'blackjack',
     loadChildren: () => import('./modules/blackjack-dice/blackjack-dice.module').then(m => m.BlackjackDiceModule)
   },
+  { 
+    path: 'todo-list',
+    loadChildren: () => import('./modules/todo-list/todo-list.module').then(m => m.TodoListModule)
+  },
   { path: '**', component: PageNotFoundComponent}
 ];
 

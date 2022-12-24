@@ -3,8 +3,7 @@ import ToDo from './models/ToDo';
 
 @Component({
   selector: 'app-todo-list',
-  templateUrl: './todo-list.component.html',
-  styleUrls: ['./todo-list.component.css']
+  templateUrl: './todo-list.component.html'
 })
 export class TodoListComponent {
   toDoList: ToDo[];

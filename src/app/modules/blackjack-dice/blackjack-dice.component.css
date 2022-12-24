@@ -1,9 +1,0 @@
-main {
-  background: rgb(28,74,8);
-  background: radial-gradient(circle, rgba(28,74,8,1) 0%, rgba(34,106,16,1) 74%, rgba(45,125,26,1) 100%);
-}
-
-h1, h2, h3 {
-  font-family: 'Patua One', sans-serif;
-  color: rgb(245, 245, 245);
-}

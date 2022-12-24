@@ -4,8 +4,7 @@ const IMGS_PATH = '../../../assets/imgs/blackjack/face';
 
 @Component({
   selector: 'app-blackjack-dice',
-  templateUrl: './blackjack-dice.component.html',
-  styleUrls: ['./blackjack-dice.component.css']
+  templateUrl: './blackjack-dice.component.html'
 })
 export class BlackjackDiceComponent {
   leftDice: number;

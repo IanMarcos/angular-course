@@ -1,5 +1,7 @@
-<main class="flex flex-col justify-center items-center h-screen gap-y-8">
-  <h1 class="text-4xl">Play Blackjack!</h1>
+<main
+  class="flex flex-col justify-center items-center h-screen gap-y-8 bg-blackjack-table"
+>
+  <h1 class="text-4xl font-patua text-gray-100">Play Blackjack!</h1>
   <div class="flex gap-x-12">
     <img
       [src]="leftDiceImg"
@@ -14,20 +16,20 @@
     />
   </div>
   <div>
-    <h2 class="text-xl">Score</h2>
-    <h3 class="text-2xl text-center">{{ score }}</h3>
+    <h2 class="text-xl font-patua text-gray-100">Score</h2>
+    <h3 class="text-2xl text-center font-patua text-gray-100">{{ score }}</h3>
   </div>
   <div>
     <button
       (click)="handleRollDice()"
-      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-900 text-lg text-white"
+      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-900 text-lg text-gray-100"
     >
       Roll
     </button>
     <button
       [disabled]="score === 0"
       (click)="handleStay()"
-      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-700 text-lg text-white"
+      class="w-16 rounded-xl px-3 py-2 mx-2 bg-gray-700 text-lg text-gray-100"
     >
       Stay
     </button>
@@ -36,7 +38,7 @@
   <div
     *ngIf="gameState !== 'playing'"
     [ngSwitch]="gameState"
-    class="fixed h-screen w-screen bg-black/70 flex flex-col justify-center items-center gap-6 text-white"
+    class="fixed h-screen w-screen bg-black/70 flex flex-col justify-center items-center gap-6 text-gray-100"
   >
     <strong *ngSwitchCase="'blackjack'" class="text-3xl">Blackjack!</strong>
     <strong *ngSwitchCase="'finished'" class="text-3xl">Round finished!</strong>
@@ -46,7 +48,7 @@
     </p>
     <button
       (click)="handleGameReset()"
-      class="bg-gray-900 rounded-xl text-white px-3 py-2"
+      class="bg-gray-900 rounded-xl text-gray-100 px-3 py-2"
     >
       Play again
     </button>

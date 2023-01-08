@@ -1,0 +1,53 @@
+<div
+  class="h-16 border border-solid border-stone-700 rounded bg-stone-200 flex items-center gap-x-5 px-4"
+>
+  <div>
+    <input
+      class="w-3 h-3 text-cyan-300 mx-2"
+      type="radio"
+      name="filter-options"
+      id="all-types"
+      value="all"
+      checked
+      [(ngModel)]="selectedRadioBtn"
+      (change)="handleGenderInputChange()"
+    />
+    <label for="all-types">All({{ totalCount }})</label>
+  </div>
+  <div>
+    <input
+      class="w-3 h-3 text-cyan-300 mx-2"
+      type="radio"
+      name="filter-options"
+      id="fem"
+      value="female"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="handleGenderInputChange()"
+    />
+    <label for="fem">Female({{ femaleCount }})</label>
+  </div>
+  <div>
+    <input
+      class="w-3 h-3 text-cyan-300 mx-2"
+      type="radio"
+      name="filter-options"
+      id="male"
+      value="male"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="handleGenderInputChange()"
+    />
+    <label for="male">Male({{ maleCount }})</label>
+  </div>
+  <div>
+    <input
+      class="w-3 h-3 text-cyan-300 mx-2"
+      type="radio"
+      name="filter-options"
+      id="other"
+      value="other"
+      [(ngModel)]="selectedRadioBtn"
+      (change)="handleGenderInputChange()"
+    />
+    <label for="fem">Other({{ otherGendersCount }})</label>
+  </div>
+</div>

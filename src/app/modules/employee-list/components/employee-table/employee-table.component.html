@@ -1,0 +1,43 @@
+<div class="flex flex-col gap-y-3 items-center">
+  <app-filter-menu
+    [totalCount]="getTotalEmployees()"
+    [femaleCount]="getGenderEmployeeCount('female')"
+    [maleCount]="getGenderEmployeeCount('male')"
+    [otherGendersCount]="getGenderEmployeeCount('other')"
+    (genderInputChange)="updateSelectedGender($event)"
+  ></app-filter-menu>
+  <div
+    class="w-4/5 border border-solid border-stone-300 rounded flex items-center"
+  >
+    <table
+      class="w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded"
+    >
+      <thead
+        class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+      >
+        <tr>
+          <th class="py-3 px-6">Name</th>
+          <th class="py-3 px-6">Surname</th>
+          <th class="py-3 px-6">Sex</th>
+          <th class="py-3 px-6">Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let employee of employeeList">
+          <tr
+            *ngIf="
+              selectedGender === 'all' ||
+              selectedGender === employee.getGender()
+            "
+            class="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+          >
+            <td class="py-4 px-6">{{ employee.getName() }}</td>
+            <td class="py-4 px-6">{{ employee.getSurname() }}</td>
+            <td class="py-4 px-6">{{ employee.getGender() }}</td>
+            <td class="py-4 px-6">{{ employee.getSalary() | currency }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</div>

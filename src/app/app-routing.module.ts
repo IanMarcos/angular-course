@@ -4,7 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent },
   { 
     path: 'piano',
     loadChildren: () => import('./modules/piano/piano.module').then(m => m.PianoModule)
@@ -17,7 +17,11 @@ const routes: Routes = [
     path: 'todo-list',
     loadChildren: () => import('./modules/todo-list/todo-list.module').then(m => m.TodoListModule)
   },
-  { path: '**', component: PageNotFoundComponent}
+  { 
+    path: 'employee-list',
+    loadChildren: () => import('./modules/employee-list/employee-list.module').then(m => m.EmployeeListModule)
+  },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

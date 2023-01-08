@@ -14,10 +14,10 @@ export class ProjectListComponent {
 
   constructor() {
     this.projects = [
-      { name: 'Piano', url:'/piano'},
-      { name: 'Blackjack', url:'/blackjack'},
-      { name: 'TODO list', url:'/todo-list'},
-      { name: 'null', url:'/'},
+      { name: 'Piano', url:'/piano' },
+      { name: 'Blackjack', url:'/blackjack' },
+      { name: 'TODO list', url:'/todo-list' },
+      { name: 'Employee list', url:'/employee-list' },
     ];
   }
 }

@@ -1,0 +1,22 @@
+<h2 class="text-2xl text-center">Your appointments</h2>
+<div
+  class="flex justify-between items-center px-16 gap-y-5 border-b border-gray-400 py-4"
+  *ngFor="let appointment of appointmentList; let i = index"
+>
+  <div>
+    <h3 class="text-xl text-gray-800 uppercase">{{ appointment.patient }}</h3>
+    <div class="pl-2">
+      <p class="text-sm">{{ appointment.date }} - {{ appointment.time }}</p>
+      <p class="italic">{{ appointment.symptoms }}</p>
+    </div>
+  </div>
+  <button
+    class="w-10 h-10 text-white bg-red-600 rounded-md"
+    (click)="deleteAppointment(i)"
+  >
+    <i class="fa-solid fa-trash"></i>
+  </button>
+</div>
+<div *ngIf="appointmentList.length === 0" class="text-center text-xl mt-8">
+  No appointments due
+</div>

@@ -18,6 +18,10 @@ export class ProjectListComponent {
       { name: 'Blackjack', url:'/blackjack' },
       { name: 'TODO list', url:'/todo-list' },
       { name: 'Employee list', url:'/employee-list' },
+      { name: 'Appointments', url:'/appointments' },
+      { name: 'null', url:'/employee-list' },
+      { name: 'null', url:'/employee-list' },
+      { name: 'null', url:'/employee-list' },
     ];
   }
 }

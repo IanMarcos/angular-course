@@ -21,6 +21,10 @@ const routes: Routes = [
     path: 'employee-list',
     loadChildren: () => import('./modules/employee-list/employee-list.module').then(m => m.EmployeeListModule)
   },
+  { 
+    path: 'appointments',
+    loadChildren: () => import('./modules/appointments/appointments.module').then(m => m.AppointmentsModule)
+  },
   { path: '**', component: PageNotFoundComponent }
 ];
 

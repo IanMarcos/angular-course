@@ -1,0 +1,14 @@
+<h1 class="text-5xl text-center mt-4">Make appointments</h1>
+<div class="flex py-5 justify-center">
+  <section class="w-2/5 border border-dotted border-gray-500 mx-3">
+    <app-appointment-form
+      (newAppointment)="addAppointment($event)"
+    ></app-appointment-form>
+  </section>
+  <section class="w-2/5 border border-dotted border-gray-500 mx-3">
+    <app-appointments-list
+      [appointmentList]="appointmentList"
+      (deleteAppointmentEvent)="deleteAppointment($event)"
+    ></app-appointments-list>
+  </section>
+</div>

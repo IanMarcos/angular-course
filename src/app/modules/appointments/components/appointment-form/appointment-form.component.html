@@ -1,0 +1,59 @@
+<h2 class="text-2xl text-center">Add an appointment</h2>
+<!-- <form> -->
+<div class="flex flex-col gap-y-5 py-5 px-6">
+  <div>
+    <label for="patient-name">Name</label>
+    <input
+      id="patient-name"
+      type="text"
+      class="px-2 border border-gray-400 rounded-md block w-full"
+      [(ngModel)]="patient"
+    />
+  </div>
+  <div>
+    <label for="appointment-date">Date</label>
+    <input
+      id="appointment-date"
+      type="date"
+      class="px-2 border border-gray-400 rounded-md block w-full"
+      [(ngModel)]="date"
+    />
+  </div>
+  <div>
+    <label for="appointment-time">Time</label>
+    <input
+      id="appointment-time"
+      type="time"
+      class="px-2 border border-gray-400 rounded-md block w-full"
+      [(ngModel)]="time"
+    />
+  </div>
+  <div>
+    <label for="symptoms">Symptoms</label>
+    <textarea
+      id="symptoms"
+      class="px-2 border border-gray-400 rounded-md block w-full"
+      [(ngModel)]="symptoms"
+    ></textarea>
+  </div>
+  <div class="flex justify-around">
+    <button
+      class="w-2/5 h-10 rounded-lg bg-blue-500 hover:bg-blue-600 active:bg-blue-500 text-gray-50"
+      (click)="handleSubmit()"
+    >
+      Add
+    </button>
+    <button
+      class="w-2/5 h-10 rounded-lg bg-gray-400 hover:bg-gray-500 active:bg-gray-400 text-gray-50"
+      type="reset"
+      (click)="resetForm()"
+    >
+      Clean form
+    </button>
+  </div>
+  <span
+    class="w-full h-6 text-center bg-red-500 text-white rounded-md"
+    *ngIf="isErrorInForm"
+    >All fields are mandatory!</span
+  >
+</div>

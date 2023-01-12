@@ -1,0 +1,25 @@
+<ng-template #numericInputTemplate>
+  <div
+    class="w-1/2 h-32 rounded-xl bg-red-500/60 flex flex-col items-center justify-center gap-y-0.5"
+  >
+    <h2 class="text-xl">{{ title }}</h2>
+    <p>
+      <span class="text-3xl font-title font-extrabold">{{ value }}</span
+      >{{ unit }}
+    </p>
+    <div title="Hold the click down for faster increasing/decreasing">
+      <i
+        (click)="updateValue('-')"
+        (mousedown)="continiouslyUpdateValue('-')"
+        (mouseup)="stopUpdatingValue()"
+        class="fa-solid fa-circle-minus text-2xl mx-1 hover:cursor-pointer hover:text-gray-300"
+      ></i>
+      <i
+        (click)="updateValue('+')"
+        (mousedown)="continiouslyUpdateValue('+')"
+        (mouseup)="stopUpdatingValue()"
+        class="fa-solid fa-circle-plus text-2xl mx-1 hover:cursor-pointer hover:text-gray-300"
+      ></i>
+    </div>
+  </div>
+</ng-template>

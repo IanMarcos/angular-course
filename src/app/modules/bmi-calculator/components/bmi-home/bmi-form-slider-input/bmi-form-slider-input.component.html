@@ -1,0 +1,22 @@
+<ng-template #sliderInputTemplate>
+  <div
+    id="height-selector"
+    class="w-1/2 h-32 rounded-xl bg-red-500/60 flex flex-col items-center justify-center gap-y-1"
+  >
+    <h2 class="text-xl">{{ title }}</h2>
+    <p>
+      <span class="text-3xl font-title font-extrabold">{{
+        numValue / 100
+      }}</span
+      >{{ unit }}
+    </p>
+    <input
+      type="range"
+      [value]="numValue"
+      [min]="min"
+      [max]="max"
+      (input)="changeValue($event)"
+      class="w-4/5 accent-gray-100 hover:cursor-pointer"
+    />
+  </div>
+</ng-template>

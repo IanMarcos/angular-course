@@ -17,9 +17,9 @@ export class ProjectListComponent {
       { name: 'Piano', url:'/piano' },
       { name: 'Blackjack', url:'/blackjack' },
       { name: 'TODO list', url:'/todo-list' },
+      { name: 'BMI calculator', url:'/bmi' },
       { name: 'Employee list', url:'/employee-list' },
       { name: 'Appointments', url:'/appointments' },
-      { name: 'null', url:'/employee-list' },
       { name: 'null', url:'/employee-list' },
       { name: 'null', url:'/employee-list' },
     ];

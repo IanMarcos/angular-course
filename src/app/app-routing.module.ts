@@ -18,6 +18,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/todo-list/todo-list.module').then(m => m.TodoListModule)
   },
   { 
+    path: 'bmi',
+    loadChildren: () => import('./modules/bmi-calculator/bmi-calculator.module').then(m => m.BMICalculatorModule)
+  },
+  { 
     path: 'employee-list',
     loadChildren: () => import('./modules/employee-list/employee-list.module').then(m => m.EmployeeListModule)
   },

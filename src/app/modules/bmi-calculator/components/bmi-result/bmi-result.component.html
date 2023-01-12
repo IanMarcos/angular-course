@@ -1,0 +1,24 @@
+<main
+  class="flex items-center justify-center h-screen py-5 bg-gray-800 text-gray-50"
+>
+  <div
+    class="w-1/2 h-4/5 flex flex-col justify-around bg-gray-300/40 rounded-xl text-center"
+  >
+    <h1 class="font-title text-4xl font-bold">Your results</h1>
+    <strong class="font-title text-6xl font-extrabold">{{ bmi }}</strong>
+    <p>
+      <span
+        [ngClass]="
+          state === 'good'
+            ? 'text-green-600'
+            : state === 'mid'
+            ? 'text-orange-600'
+            : 'text-red-600'
+        "
+        class="font-bold"
+        >{{ category }}.</span
+      >
+      {{ recommendations[score] }}
+    </p>
+  </div>
+</main>

@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': ['Quicksand', defaultTheme.fontFamily.sans],
-      'title': ['Contrail One', defaultTheme.fontFamily.sans],
+      'title': ['Railway', defaultTheme.fontFamily.sans],
       'patua': ['Patua One', defaultTheme.fontFamily.sans],
     },
     extend: {

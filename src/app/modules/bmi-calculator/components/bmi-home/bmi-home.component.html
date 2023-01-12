@@ -1,0 +1,50 @@
+<main
+  class="flex flex-col items-center gap-y-5 h-screen py-5 bg-gray-800 text-gray-50"
+>
+  <h1 class="my-2 text-4xl font-title font-bold">BMI Calculator</h1>
+  <div id="sex-selector" class="w-1/2 flex justify-center gap-x-5">
+    <button
+      (click)="updateSex('male')"
+      [ngClass]="sex === 'male' ? 'bg-red-500/60' : 'bg-red-500/20'"
+      class="w-1/2 h-32 rounded-xl"
+    >
+      <i class="fa-solid fa-mars text-3xl"></i>
+      <h2>Male</h2>
+    </button>
+    <button
+      (click)="updateSex('female')"
+      [ngClass]="sex === 'female' ? 'bg-red-500/60' : 'bg-red-500/20'"
+      class="w-1/2 h-32 rounded-xl"
+    >
+      <i class="fa-solid fa-venus text-3xl"></i>
+      <h2>Female</h2>
+    </button>
+  </div>
+  <bmi-form-slider-input
+    [title]="'Height'"
+    [min]="100"
+    [max]="240"
+    [numValue]="height"
+    [unit]="'m'"
+    (valueChange)="updateHeight($event)"
+  ></bmi-form-slider-input>
+  <div id="number-selector" class="w-1/2 flex justify-center gap-x-5">
+    <bmi-form-numeric-input
+      [title]="'Weight'"
+      [unit]="'kg'"
+      [value]="weight"
+      (valueChange)="updateWeight($event)"
+    ></bmi-form-numeric-input>
+    <bmi-form-numeric-input
+      [title]="'Age'"
+      [value]="age"
+      (valueChange)="updateAge($event)"
+    ></bmi-form-numeric-input>
+  </div>
+  <button
+    (click)="handleSubmit()"
+    class="w-1/2 h-12 rounded-full font-title font-bold text-2xl bg-red-500/40 hover:bg-red-500/80"
+  >
+    CALCULATE
+  </button>
+</main>

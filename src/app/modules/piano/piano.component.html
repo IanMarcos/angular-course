@@ -6,24 +6,9 @@
       (click)="playPianoKey(1)"
     ></li>
     <li
+      *ngFor="let key of [2, 3, 4, 5, 6]"
       class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg shadow-inner drop-shadow-md hover:cursor-pointer"
-      (click)="playPianoKey(2)"
-    ></li>
-    <li
-      class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg shadow-inner drop-shadow-md hover:cursor-pointer"
-      (click)="playPianoKey(3)"
-    ></li>
-    <li
-      class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg shadow-inner drop-shadow-md hover:cursor-pointer"
-      (click)="playPianoKey(4)"
-    ></li>
-    <li
-      class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg shadow-inner drop-shadow-md hover:cursor-pointer"
-      (click)="playPianoKey(5)"
-    ></li>
-    <li
-      class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg shadow-inner drop-shadow-md hover:cursor-pointer"
-      (click)="playPianoKey(6)"
+      (click)="playPianoKey(key)"
     ></li>
     <li
       class="h-48 w-20 bg-gray-200 hover:bg-gray-300 active:bg-gray-100 rounded-b-lg rounded-tr-lg shadow-inner drop-shadow-md hover:cursor-pointer"

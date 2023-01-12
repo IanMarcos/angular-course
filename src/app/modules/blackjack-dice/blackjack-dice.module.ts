@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { BlackjackDiceRoutingModule } from './blackjack-dice-routing.module';
 import { BlackjackDiceComponent } from './blackjack-dice.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -10,7 +10,7 @@ import { BlackjackDiceComponent } from './blackjack-dice.component';
     BlackjackDiceComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     BlackjackDiceRoutingModule
   ]
 })

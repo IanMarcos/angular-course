@@ -6,6 +6,7 @@ import { BmiHomeComponent } from './components/bmi-home/bmi-home.component';
 import { BmiResultComponent } from './components/bmi-result/bmi-result.component';
 import { BmiFormNumericInputComponent } from './components/bmi-home/bmi-form-numeric-input/bmi-form-numeric-input.component';
 import { BmiFormSliderInputComponent } from './components/bmi-home/bmi-form-slider-input/bmi-form-slider-input.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -16,7 +17,7 @@ import { BmiFormSliderInputComponent } from './components/bmi-home/bmi-form-slid
     BmiFormSliderInputComponent
   ],
   imports: [
-    CommonModule,
+    SharedModule,
     BMICalculatorRoutingModule
   ]
 })

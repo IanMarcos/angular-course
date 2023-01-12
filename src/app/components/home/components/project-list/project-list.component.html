@@ -1,16 +1,14 @@
 <ul class="grid grid-cols-4 gap-x-2 gap-y-3 px-[15%] py-8">
   <li
     *ngFor="let project of projects"
+    routerLink="{{ project.url }}"
     class="flex items-center justify-center h-14 px-4 rounded-sm skew-x-[-12deg] hover:cursor-pointer bg-neutral-200 hover:bg-neutral-100 active:bg-neutral-200"
     [ngClass]="
       project.name === 'null' ? 'hover:bg-neutral-200 hover:cursor-default' : ''
     "
   >
-    <a
-      *ngIf="project.name !== 'null'"
-      routerLink="{{ project.url }}"
-      class="block skew-x-12 text-center"
-      >{{ project.name }}</a
-    >
+    <a *ngIf="project.name !== 'null'" class="block skew-x-12 text-center">{{
+      project.name
+    }}</a>
   </li>
 </ul>
